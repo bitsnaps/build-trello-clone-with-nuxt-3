@@ -16,6 +16,8 @@ function addColumn() {
   newColumnName.value = ''
 }
 
+const nbrOfTasks = computed(() => boardStore.board.columns.reduce((t, c) => t + c.tasks.length, 0))
+
 function closeModal() {
   router.push('/')
 }
@@ -23,6 +25,7 @@ function closeModal() {
 
 <template>
   <div class="board-wrapper">
+    <h1 class="mb-2">Backlog: {{ nbrOfTasks }} task(s)</h1>
     <main class="board">
       <BoardColumn
         v-for="(column, columnIndex) in boardStore.board.columns"

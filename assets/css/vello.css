@@ -7,7 +7,7 @@
 }
 
 .column {
-  @apply flex-1 p-4 mr-4 rounded bg-gray-200;
+  @apply flex-1 p-4 mr-4 rounded bg-gray-200 hover:border-2 hover:border-gray-400;
   min-width: 350px;
 }
 
